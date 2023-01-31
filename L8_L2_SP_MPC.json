@@ -1,0 +1,80 @@
+{
+  "description" : "Landsat Collection 2 Level-2 Science Products",
+  "references" : "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-1328_Landsat8-9-OLI-TIRS-C2-L2-DFCB-v6.pdf",
+  "tags" : ["Landsat", "USGS", "Level 2", "NASA", "surface reflectance"],
+  "pattern" : ".+\\.tif",
+  "images" : {
+    "pattern" : ".*(L[OTC]08_.{4}_.{6}_.{8}_.{8}_.{2}_.{2})[A-Za-z0-9_]+\\.tif"
+  },
+  "datetime" : {
+    "pattern" : ".*L[OTC]08_.{4}_.{6}_(.{8})_.*\\.tif",
+    "format" : "%Y%m%d"
+  },
+  "bands": {
+    "B01" : {
+      "pattern" : ".+SR_B1\\.tif",
+      "nodata" : -9999
+    },
+    "B02" : {
+      "pattern" : ".+SR_B2\\.tif",
+      "nodata" : -9999
+    },
+    "B03" : {
+      "pattern" : ".+SR_B3\\.tif",
+      "nodata" : -9999
+    },
+    "B04" : {
+      "pattern" : ".+SR_B4\\.tif",
+      "nodata" : -9999
+    },
+    "B05" : {
+      "pattern" : ".+SR_B5\\.tif",
+      "nodata" : -9999
+    },
+    "B06" : {
+      "pattern" : ".+SR_B6\\.tif",
+      "nodata" : -9999
+    },
+    "B07" : {
+      "pattern" : ".+SR_B7\\.tif",
+      "nodata" : -9999
+    },
+    "PIXEL_QA" : {
+      "pattern" : ".+QA_PIXEL\\.tif"
+    },
+    "RADSAT_QA" : {
+      "pattern" : ".+QA_RADSAT\\.tif"
+    },
+    "AEROSOL" : {
+      "pattern" : ".+SR_QA_AEROSOL\\.tif"
+    },
+    "NDVI" : {
+      "pattern" : ".+SR_NDVI\\.tif",
+      "nodata" :-9999
+    },
+    "EVI" : {
+      "pattern" : ".+SR_EVI\\.tif",
+      "nodata" :-9999
+    },
+    "SAVI" : {
+      "pattern" : ".+SR_SAVI\\.tif",
+      "nodata" :-9999
+    },
+    "MSAVI" : {
+      "pattern" : ".+SR_MSAVI\\.tif",
+      "nodata" :-9999
+    },
+    "NDMI" : {
+      "pattern" : ".+SR_NDMI\\.tif",
+      "nodata" :-9999
+    },
+    "NBR" : {
+      "pattern" : ".+SR_NBR\\.tif",
+      "nodata" :-9999
+    },
+    "NBR2" : {
+      "pattern" : ".+SR_NBR2\\.tif",
+      "nodata" :-9999
+    }
+  }
+}
